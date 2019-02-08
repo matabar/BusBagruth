@@ -4,7 +4,7 @@ public class BusRoute {
 
 	public BusRoute(Station first, Station second) {
 		setRoute(first.toNode());
-		route.setNext(second.toNode());
+		this.route.setNext(second.toNode());
 	}
 
 	public void addStation(Station newStation) {
