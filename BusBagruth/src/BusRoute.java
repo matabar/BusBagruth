@@ -8,7 +8,7 @@ public class BusRoute {
 	}
 
 	public void addStation(Station newStation) {
-		Node<Station> temp = route;
+		Node<Station> temp = this.route;
 		while (temp.hasNext())
 			temp = temp.getNext();
 		temp.setNext(newStation.toNode());
@@ -16,7 +16,7 @@ public class BusRoute {
 
 	public double RouteLength() {
 		double dis = 0;
-		Node<Station> temp = route;
+		Node<Station> temp = this.route;
 		while (temp.hasNext()) {
 			dis += temp.getValue().distance(temp.getNext().getValue());
 			temp = temp.getNext();
@@ -25,7 +25,7 @@ public class BusRoute {
 	}
 
 	public String toString() {
-		return route.toString();
+		return this.route.toString();
 	}
 
 	public void setRoute(Node<Station> route) {
